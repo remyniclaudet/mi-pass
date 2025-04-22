@@ -1,0 +1,55 @@
+/* Animations GSAP */
+.fade-in {
+    opacity: 0;
+  }
+  
+  .slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .slide-right {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  
+  .slide-left {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  
+  /* Keyframes */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  /* Transition effects */
+  .fast-transition {
+    transition: all 0.3s ease;
+  }
+  
+  .slow-transition {
+    transition: all 0.6s ease;
+  }
