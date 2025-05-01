@@ -1,18 +1,29 @@
-import { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import '../src/assets/styles/components/header.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Dashboard from './pages/Dashboard'
+import Header from './components/Header'
+import Footer from './components/Footer'
+//import './styles/main.scss'
 
-const Header = lazy(() => import('./components/layout/Header'))
-
-
-const App = () => {
+function App() {
   return (
-    <div className="app-container">
-      <Suspense fallback={<div className="loading">Chargement...</div>}>
-          <Header/>
-      </Suspense>
-    </div>
+    <Router>
+      <div className="app-container">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/passwords" element={<Dashboard />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

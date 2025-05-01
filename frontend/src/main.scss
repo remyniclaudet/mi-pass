@@ -1,0 +1,38 @@
+// Variables
+$primary: #ff7f00;
+$primary-dark: darken($primary, 15%);
+
+// Styles globaux
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.auth-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+  h2 {
+    color: $primary;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.input-with-icon {
+  position: relative;
+  svg {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+  }
+  input {
+    padding-left: 35px;
+  }
+}

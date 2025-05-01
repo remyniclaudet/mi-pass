@@ -1,0 +1,22 @@
+.home-container {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ff7f00 0%, #ff5e00 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  
+    .cta-buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+  }
